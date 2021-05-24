@@ -1,29 +1,19 @@
 import express from "express";
 import morgan from "morgan";
+import globalRouter from "./routers/globalRouter";
+import userRouter from "./routers/userRouter";
+import videoRouter from "./routers/videoRouter";
 
-const PORT = 4000;
 
 const app = express();
 const logger = morgan("dev");
 
-const globalRouter = express.Router();
-const userRouter = express.Router();
-const videoRouter = express.Router();
-
-const home = (req, res) => {
-    console.log("I will respond!");
-    return res.send("hello!");
-};
-
-const login = (req, res) => {
-    return res.send("login");
-};
-
+app.set("view engine", "pug");
+app.set("views", process.cwd() + "/src/views");
 app.use(logger);
-app.get("/", home);
-app.get("/login", login);
+app.use(express.urlencoded({ extended: true }));
+app.use("/", globalRouter);
+app.use("/videos", videoRouter);
+app.use("/users", userRouter);
 
-const handleListening = () =>
-    console.log(`Server Listening on port http://localhost:${PORT}`);
-
-app.listen(PORT, handleListening);
+export default app;

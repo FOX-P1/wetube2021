@@ -7,7 +7,7 @@
     "url": "git+https://github.com/nomadcoders/wetube-reloaded.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server.js"
+    "dev": "nodemon --exec babel-node src/init.js"
   },
   "author": "",
   "license": "MIT",
@@ -17,7 +17,9 @@
   "homepage": "https://github.com/nomadcoders/wetube-reloaded#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "mongoose": "^5.12.10",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
