@@ -1,4 +1,4 @@
-# Wetube Reloaded
+# Wetube 2021
 
 / -> Home
 /join -> Join
