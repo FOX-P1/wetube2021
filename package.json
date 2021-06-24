@@ -10,7 +10,7 @@
     "dev:server": "nodemon",
     "dev:assets": "webpack"
   },
-  "author": "",
+  "author": "sim min gyu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nomadcoders/wetube-reloaded/issues"
