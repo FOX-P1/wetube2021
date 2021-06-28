@@ -119,7 +119,7 @@ const downloadFile = (fileUrl, fileName) => {
 const handleDownload = async () => {
   actionBtn.removeEventListener("click", handleDownload);
 
-  actionBtn.innerText = "Transcoding...";
+  actionBtn.innerText = "Recording";
 
   actionBtn.disabled = true;
 
